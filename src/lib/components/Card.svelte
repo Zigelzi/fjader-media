@@ -3,8 +3,8 @@
 	export let content: String;
 </script>
 
-<div>
-	<h2>
+<div class="border-2 border-gray-500 p-4 max-w-sm">
+	<h2 class="font-bold mb-2 text-center">
 		{title}
 	</h2>
 

@@ -10,6 +10,8 @@
 	<slot />
 </main>
 <footer>
-	<p>Fjader Media</p>
-	<p>Videoita tarinoista ja ihmisistä jotka jäävät mieleen</p>
+	<div class="px-4 py-6 bg-gray-300">
+		<p class="font-bold mb-2">Fjader Media</p>
+		<p class="text-sm">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</p>
+	</div>
 </footer>

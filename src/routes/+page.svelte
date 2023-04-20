@@ -73,7 +73,7 @@
 		</p>
 	</div>
 	<div class="container px-4 py-12 mx-auto">
-		<div class="flex gap-4 justify-between">
+		<div class="flex gap-4 justify-between flex-wrap">
 			{#each products as product}
 				<div class="mb-6">
 					<Card title={product.title} content={product.content} />
@@ -82,7 +82,7 @@
 		</div>
 	</div>
 </section>
-<section>
+<section id="showreel">
 	<div class="container px-4 py-12 mx-auto">
 		<h2 class="text-2xl mb-6">Showreel</h2>
 		<Button href="mailto:{contactEmail}">Ota yhteyttä</Button>
@@ -104,7 +104,7 @@
 <section>
 	<div class="container px-4 py-12 mx-auto">
 		<h2 class="text-2xl mb-6">Laatua vaivattomasti järkihintaan</h2>
-		<div class="flex gap-4 justify-between">
+		<div class="flex gap-4 justify-between flex-wrap">
 			{#each benefits as benefit}
 				<div class="mb-6">
 					<Card title={benefit.title} content={benefit.content} />

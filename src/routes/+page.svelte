@@ -41,8 +41,8 @@
 </script>
 
 <section>
-	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-2xl mb-6">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</h2>
+	<div class="container px-4 py-12 mx-auto min-h-[75vh]">
+		<h2 class="text-4xl mb-6 xl:text-6xl">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</h2>
 		<p class="text-lg mb-8">
 			Paranna yrityksesi tunnettavuutta, kasvata myyntiäsi tai kouluta ihmisiä tyylikkäiden ja
 			ammattimaisten videoiden avulla
@@ -55,19 +55,19 @@
 		</div>
 	</div>
 </section>
-<section>
+<section class="bg-gray-200">
 	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-2xl mb-6">Videotuotanto</h2>
-		<p>
-			Toteutan yrityksille ammattimaisesti kuvattuja videoita eri tarkoituksiin, joiden avulla
-			parannat yrityksesi tunnettavuutta, myyntiä ja koulutuksia.
+		<h2 class="text-2xl mb-6">Videotuotantoa yrityksille</h2>
+		<p class="mb-4">
+			Toteutan yrityksille ammattimaisesti kuvattuja videoita, joiden avulla parannat yrityksesi
+			tunnettavuutta, myyntiä ja koulutuksia.
 		</p>
 
-		<p>
+		<p class="mb-4">
 			Videoiden avulla pystyt näyttämään ja kertomaan tuotteestasi tai yrityksestäsi
 			mieleenpainuvalla tavalla.
 		</p>
-		<p>
+		<p class="mb-4">
 			Oli tavoitteesi sitten lisätä myyntiä, parantaa tunnettavuuttasi tai kouluttaa tuote tai
 			prosessi, niin video on erinomainen työkalu siihen.
 		</p>
@@ -91,7 +91,7 @@
 <section>
 	<div class="container px-4 py-12 mx-auto">
 		<h2 class="text-2xl mb-6">Mies kameran takana</h2>
-		<p>
+		<p class="mb-4">
 			Olen 20 vuotta videoita ammatikseni tehnyt AV -alan ammattilainen. Olen tuottanut yli 150 eri
 			tyyppistä videoita, muutamia kohokohtia löydät showreelistä yläpuolella.
 		</p>
@@ -101,7 +101,7 @@
 		</p>
 	</div>
 </section>
-<section>
+<section class="bg-gray-200">
 	<div class="container px-4 py-12 mx-auto">
 		<h2 class="text-2xl mb-6">Laatua vaivattomasti järkihintaan</h2>
 		<div class="flex gap-4 justify-between flex-wrap">

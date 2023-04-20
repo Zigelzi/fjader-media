@@ -9,8 +9,8 @@
 <main>
 	<slot />
 </main>
-<footer>
-	<div class="px-4 py-6 bg-gray-300">
+<footer class="bg-gray-300">
+	<div class="px-4 py-6 container mx-auto">
 		<p class="font-bold mb-2">Fjader Media</p>
 		<p class="text-sm">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</p>
 	</div>

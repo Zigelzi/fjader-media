@@ -48,14 +48,14 @@
 			ammattimaisten videoiden avulla
 		</p>
 		<div class="mb-4 flex justify-center">
-			<Button href="#showreel">Katso esimerkkejä</Button>
+			<Button href="#showreel">Katso parhaat palat</Button>
 		</div>
 		<div class="text-center">
 			<a href="mailto:{contactEmail}">Ota yhteyttä</a>
 		</div>
 	</div>
 </section>
-<section class="bg-gray-200">
+<section class="bg-stone-950 text-stone-50">
 	<div class="container px-4 py-12 mx-auto">
 		<h2 class="text-2xl mb-6">Videotuotantoa yrityksille</h2>
 		<p class="mb-4">
@@ -85,6 +85,17 @@
 <section id="showreel">
 	<div class="container px-4 py-12 mx-auto">
 		<h2 class="text-2xl mb-6">Showreel</h2>
+		<div style="padding:56.25% 0 0 0;position:relative;" class="my-4">
+			<iframe
+				src="https://player.vimeo.com/video/814152881?h=9dd80cab10"
+				style="position:absolute;top:0;left:0;width:100%;height:100%;"
+				frameborder="0"
+				allow="autoplay; fullscreen; picture-in-picture"
+				allowfullscreen
+				title="Video displaying videos produced by Fjader Media"
+			/>
+		</div>
+		<script src="https://player.vimeo.com/api/player.js"></script>
 		<Button href="mailto:{contactEmail}">Ota yhteyttä</Button>
 	</div>
 </section>
@@ -101,7 +112,7 @@
 		</p>
 	</div>
 </section>
-<section class="bg-gray-200">
+<section class="bg-stone-950 text-stone-50">
 	<div class="container px-4 py-12 mx-auto">
 		<h2 class="text-2xl mb-6">Laatua vaivattomasti järkihintaan</h2>
 		<div class="flex gap-4 justify-between flex-wrap">

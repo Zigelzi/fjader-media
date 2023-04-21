@@ -147,7 +147,7 @@
 </section>
 {#if isOverlayVisible}
 	<div id="overlay" class="fixed inset-0 bg-stone-800/80 text-stone-50 flex flex-col z-10">
-		<div class="flex justify-end absolute md:static inset-x-0">
+		<div class="flex justify-end absolute md:static inset-x-0 z-20">
 			<button class="p-4 text-2xl text-bold mr-2" on:click={displayModal}>X</button>
 		</div>
 		<div class="grow justify-center flex md:my-8">

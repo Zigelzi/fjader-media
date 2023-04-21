@@ -3,6 +3,7 @@
 	import Button from '$lib/components/Button.svelte';
 
 	let contactEmail = 'matti@example.com';
+	let isOverlayVisible = false;
 	let products = [
 		{
 			title: 'Uratarinat',
@@ -38,6 +39,11 @@
 				'Videon tuottaminen ei tarvitse olla kallista. Yksi mies kuvaa ja tuottaa videosi, joten myös maksat yhdelle ihmiselle.'
 		}
 	];
+
+	function displayModal(event: any) {
+		isOverlayVisible = !isOverlayVisible;
+		console.log('Clicked button!');
+	}
 </script>
 
 <section>
@@ -48,7 +54,7 @@
 			ammattimaisten videoiden avulla
 		</p>
 		<div class="mb-4 flex justify-center">
-			<Button href="#showreel">Katso parhaat palat</Button>
+			<Button on:click={displayModal} isLink={false}>Katso parhaat palat</Button>
 		</div>
 		<div class="text-center">
 			<a href="mailto:{contactEmail}">Ota yhteyttä</a>
@@ -139,3 +145,23 @@
 		</div>
 	</div>
 </section>
+{#if isOverlayVisible}
+	<div id="overlay" class="fixed inset-0 bg-stone-800/80 text-stone-50 flex flex-col z-10">
+		<div class="flex justify-end absolute md:static inset-x-0">
+			<button class="p-4 text-2xl text-bold mr-2" on:click={displayModal}>X</button>
+		</div>
+		<div class="grow justify-center flex md:my-8">
+			<div class="grow relative">
+				<iframe
+					src="https://player.vimeo.com/video/814152881?h=9dd80cab10"
+					style="position:absolute;top:0;left:0;width:100%;height:100%;"
+					frameborder="0"
+					allow="autoplay; fullscreen; picture-in-picture"
+					allowfullscreen
+					title="Video displaying videos produced by Fjader Media"
+				/>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+		</div>
+	</div>
+{/if}

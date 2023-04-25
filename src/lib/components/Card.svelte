@@ -1,10 +1,11 @@
 <script lang="ts">
-	export let title: String;
-	export let content: String;
+	export let title: string;
+	export let content: string;
 </script>
 
-<div class="border-2 border-gray-500 p-4 max-w-sm">
-	<h2 class="font-bold mb-2 text-center">
+<div class="p-4 max-w-sm">
+	<slot />
+	<h2 class="font-bold mt-4 mb-2 text-center">
 		{title}
 	</h2>
 

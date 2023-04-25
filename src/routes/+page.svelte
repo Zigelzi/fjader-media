@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Card from '$lib/components/Card.svelte';
 	import Button from '$lib/components/Button.svelte';
+	import careerStories from '$lib/assets/career-stories.jpg?w=400&h=300&webp';
 
 	let contactEmail = 'matti@example.com';
 	let isOverlayVisible = false;
@@ -82,7 +83,9 @@
 		<div class="flex gap-4 justify-between flex-wrap">
 			{#each products as product}
 				<div class="mb-6">
-					<Card title={product.title} content={product.content} />
+					<Card title={product.title} content={product.content}>
+						<img class="max-w-full" src={careerStories} alt="" srcset="" />
+					</Card>
 				</div>
 			{/each}
 		</div>

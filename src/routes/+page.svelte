@@ -2,6 +2,7 @@
 	import Card from '$lib/components/Card.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import careerStories from '$lib/assets/career-stories.jpg?w=400&h=300&webp';
+	import videoCamera from '$lib/assets/video-camera.jpg';
 
 	let contactEmail = 'matti@example.com';
 	let isOverlayVisible = false;
@@ -48,17 +49,26 @@
 </script>
 
 <section>
-	<div class="container px-4 py-12 mx-auto min-h-[75vh]">
-		<h2 class="text-4xl mb-6 xl:text-6xl">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</h2>
-		<p class="text-lg mb-8">
-			Paranna yrityksesi tunnettavuutta, kasvata myyntiäsi tai kouluta ihmisiä tyylikkäiden ja
-			ammattimaisten videoiden avulla
-		</p>
-		<div class="mb-4 flex justify-center">
-			<Button on:click={displayModal} isLink={false}>Katso parhaat palat</Button>
+	<div class="container px-4 py-12 mx-auto min-h-[75vh] flex gap-4 flex-wrap justify-center">
+		<div class="max-w-2xl">
+			<h2 class="text-4xl mb-6 xl:text-5xl">
+				Videoita tarinoista ja ihmisistä jotka jäävät mieleen
+			</h2>
+			<p class="text-lg mb-8">
+				Paranna yrityksesi tunnettavuutta, kasvata myyntiäsi tai kouluta ihmisiä tyylikkäiden ja
+				ammattimaisten videoiden avulla
+			</p>
+			<div class="mb-4 flex justify-center">
+				<Button on:click={displayModal} isLink={false}>Katso parhaat palat</Button>
+			</div>
+			<div class="text-center">
+				<a href="mailto:{contactEmail}">Ota yhteyttä</a>
+			</div>
 		</div>
-		<div class="text-center">
-			<a href="mailto:{contactEmail}">Ota yhteyttä</a>
+		<div
+			class="max-w-[600px] s:mt-12 relative before:block before:absolute before:inset-0 before:bg-stone-950/50 before:rounded-lg"
+		>
+			<img src={videoCamera} class="rounded-lg min-h-full" alt="" srcset="" />
 		</div>
 	</div>
 </section>

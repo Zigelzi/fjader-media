@@ -62,7 +62,7 @@
 				<Button on:click={displayModal} isLink={false}>Katso parhaat palat</Button>
 			</div>
 			<div class="text-center">
-				<a href="mailto:{contactEmail}">Ota yhteyttä</a>
+				<a href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</a>
 			</div>
 		</div>
 		<div
@@ -74,7 +74,7 @@
 </section>
 <section class="bg-stone-950 text-stone-50">
 	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-2xl mb-6">Videotuotantoa yrityksille</h2>
+		<h2 class="text-4xl font-bold mb-6">Videotuotantoa yrityksille</h2>
 		<p class="mb-4">
 			Toteutan yrityksille ammattimaisesti kuvattuja videoita, joiden avulla parannat yrityksesi
 			tunnettavuutta, myyntiä ja koulutuksia.
@@ -90,21 +90,20 @@
 		</p>
 	</div>
 	<div class="container px-4 py-12 mx-auto">
-		<div class="flex gap-4 justify-between flex-wrap">
+		<div class="flex gap-8 justify-between flex-wrap">
 			{#each products as product}
-				<div class="mb-6">
-					<Card title={product.title} content={product.content}>
-						<img class="max-w-full" src={careerStories} alt="" srcset="" />
-					</Card>
-				</div>
+				<Card title={product.title} content={product.content}>
+					<img class="max-w-full" src={careerStories} alt="" srcset="" />
+				</Card>
 			{/each}
 		</div>
 	</div>
 </section>
 <section id="showreel">
 	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-2xl mb-6">Showreel</h2>
-		<div style="padding:56.25% 0 0 0;position:relative;" class="my-4">
+		<h3>Showreel</h3>
+		<h2 class="text-4xl font-bold">Parhaat palat</h2>
+		<div style="padding:56.25% 0 0 0;position:relative;" class="my-8">
 			<iframe
 				src="https://player.vimeo.com/video/814152881?h=9dd80cab10"
 				style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -115,30 +114,28 @@
 			/>
 		</div>
 		<script src="https://player.vimeo.com/api/player.js"></script>
-		<Button href="mailto:{contactEmail}">Ota yhteyttä</Button>
+		<Button href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</Button>
 	</div>
 </section>
 <section>
-	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-2xl mb-6">Mies kameran takana</h2>
-		<p class="mb-4">
-			Olen 20 vuotta videoita ammatikseni tehnyt AV -alan ammattilainen. Olen tuottanut yli 150 eri
-			tyyppistä videoita, muutamia kohokohtia löydät showreelistä yläpuolella.
-		</p>
-		<p>
-			Työtäni on löytää haluamasi viestin ydin ja kuvata ja tuottaa siitä siitä video, joka välittää
-			haluamasi viestin ja saa katsojan vaikuttuneeksi.
-		</p>
+	<div class="container px-4 my-12 mx-auto">
+		<div class="mb-12 text-center">
+			<p class="text-7xl font-bold mb-4">20</p>
+			<p>vuotta videoalan kokemusta</p>
+		</div>
+		<div class="mb-12 text-center">
+			<p class="text-7xl font-bold mb-4">150+</p>
+			<p>tuotettua videota</p>
+		</div>
 	</div>
 </section>
 <section class="bg-stone-950 text-stone-50">
 	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-2xl mb-6">Laatua vaivattomasti järkihintaan</h2>
-		<div class="flex gap-4 justify-between flex-wrap">
+		<p class="text-stone-400 text-sm">Kolme syytä valita Fjäder Media</p>
+		<h2 class="text-4xl font-bold mb-6">Laatua vaivattomasti järkihintaan</h2>
+		<div class="flex gap-6 justify-between flex-wrap">
 			{#each benefits as benefit}
-				<div class="mb-6">
-					<Card title={benefit.title} content={benefit.content} />
-				</div>
+				<Card title={benefit.title} content={benefit.content} />
 			{/each}
 		</div>
 	</div>
@@ -154,7 +151,7 @@
 		</div>
 		<p>Hinta varmistuu kun olemme yhdessä määrittäneet tarpeesi, ennen kuin sitoudut mihinkään.</p>
 		<div class="my-4">
-			<Button href="mailto:{contactEmail}">Ota yhteyttä</Button>
+			<Button href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</Button>
 		</div>
 	</div>
 </section>

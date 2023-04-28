@@ -3,9 +3,9 @@
 	export let content: string;
 </script>
 
-<div class="p-4 max-w-sm">
+<div class="max-w-sm">
 	<slot />
-	<h2 class="font-bold mt-4 mb-2 text-center">
+	<h2 class="font-bold text-2xl lg:text-3xl mt-4 mb-2">
 		{title}
 	</h2>
 

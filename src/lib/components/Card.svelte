@@ -5,7 +5,7 @@
 
 <div class="max-w-sm">
 	<slot />
-	<h2 class="font-bold text-2xl lg:text-3xl mt-4 mb-2">
+	<h2 class="font-bold text-xl lg:text-3xl mt-4 mb-2">
 		{title}
 	</h2>
 

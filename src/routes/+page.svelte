@@ -49,8 +49,8 @@
 </script>
 
 <section>
-	<div class="container px-4 py-12 mx-auto min-h-[75vh] flex gap-4 flex-wrap justify-center">
-		<div class="max-w-2xl">
+	<div class="container px-4 lg:px-0 py-12 mx-auto min-h-[75vh] flex flex-wrap justify-between">
+		<div class="max-w-2xl md:basis-1/2 md:pr-4">
 			<h2 class="text-4xl mb-6 xl:text-5xl">
 				Videoita tarinoista ja ihmisistä jotka jäävät mieleen
 			</h2>
@@ -65,10 +65,12 @@
 				<a href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</a>
 			</div>
 		</div>
-		<div
-			class="max-w-[600px] s:mt-12 relative before:block before:absolute before:inset-0 before:bg-stone-950/50 before:rounded-lg"
-		>
-			<img src={videoCamera} class="rounded-lg min-h-full" alt="" srcset="" />
+		<div class="md:basis-1/2 mt-12 md:mt-0">
+			<div
+				class=" relative before:block before:inset-0 before:absolute before:inset-x-0 before:bg-stone-950/50 before:rounded-lg"
+			>
+				<img src={videoCamera} class="rounded-lg" alt="" srcset="" />
+			</div>
 		</div>
 	</div>
 </section>
@@ -90,6 +92,7 @@
 		</p>
 	</div>
 	<div class="container px-4 py-12 mx-auto">
+		<h2 class="text-4xl font-bold mb-6">Palvelut</h2>
 		<div class="flex gap-8 justify-between flex-wrap">
 			{#each products as product}
 				<Card title={product.title} content={product.content}>
@@ -131,7 +134,7 @@
 </section>
 <section class="bg-stone-950 text-stone-50">
 	<div class="container px-4 py-12 mx-auto">
-		<p class="text-stone-400 text-sm">Kolme syytä valita Fjäder Media</p>
+		<p class="text-stone-400">Kolme syytä valita Fjäder Media</p>
 		<h2 class="text-4xl font-bold mb-6">Laatua vaivattomasti järkihintaan</h2>
 		<div class="flex gap-6 justify-between flex-wrap">
 			{#each benefits as benefit}
@@ -142,7 +145,7 @@
 </section>
 <section>
 	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-2xl mb-6">Hinnasto</h2>
+		<h2 class="text-2xl mb-6">Hinta</h2>
 		<p>Videotuotanto on aina yksilöllistä ja lähtee sinun tarpeestasi.</p>
 		<div class="my-4">
 			<p>Tyypillisesti asiakkaani ovat valmiitä käyttämään</p>

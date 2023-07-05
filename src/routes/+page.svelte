@@ -4,7 +4,7 @@
 	import careerStories from '$lib/assets/career-stories.jpg?w=400&h=300&webp';
 	import videoCamera from '$lib/assets/video-camera.jpg';
 
-	let contactEmail = 'matti@example.com';
+	let contactEmail = 'samppa@fjadermedia.fi';
 	let isOverlayVisible = false;
 	let products = [
 		{

@@ -1,6 +1,7 @@
 <script>
 	import '$lib/styles/app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import logo_white from '$lib/assets/logo_fjader_media_736x320_white.png';
 </script>
 
 <header>
@@ -11,7 +12,7 @@
 </main>
 <footer class="bg-stone-950 text-stone-50">
 	<div class="px-4 py-6 container mx-auto">
-		<p class="font-bold mb-2">Fjader Media</p>
-		<p class="text-sm">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</p>
+		<img src={logo_white} alt="Logo of Fjäder media" class="max-h-[120px] mx-auto md:mx-0 mb-8" />
+		<p class="text-sm text-center">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</p>
 	</div>
 </footer>

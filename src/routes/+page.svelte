@@ -8,19 +8,16 @@
 	let isOverlayVisible = false;
 	let products = [
 		{
-			title: 'Uratarinat',
+			title: 'Asiantuntijavideot',
 			content:
-				'Paranna työntekijämielikuvaasi kertomalle millaista sinun yrityksessäsi on työskennellä potentiaalisille kandidaateille mieleenpainuvilla uratarinoilla.'
+				'Auta kohderyhmääsi ymmärtämään mistä homma kiikastaa ja miten juuri sinun yrityksesi tuote tai palvelu auttaa arjessa asiantuntijavideon tai verkkokurssin avulla.',
+			embedUrl: 'https://www.youtube.com/embed/0oPzyF3w0bI?si=B4OWU3ezZ7VKlbK8'
 		},
 		{
-			title: 'Kokemusvideot',
+			title: 'Yritysvideot',
 			content:
-				'Kerro ihmisen kokemuksista ja ajatuksista tunteita herättävällä tavalla kokemusvideon tai haastattelun avulla.'
-		},
-		{
-			title: 'Koulutusvideot',
-			content:
-				'Säästä kouluttamiseen käyttämääsi aikaa ja paranna niiden laatua helposti ymmärrettävän koulutusvideon avulla.'
+				'Kerro asiakkaitesi kokemuksista ja ajatuksista tunteita herättävällä tavalla kokemusvideon tai haastattelun avulla.',
+			embedUrl: 'https://www.youtube.com/embed/uAkN8Igd700?si=oNoH9RUejx-ucYDa'
 		}
 	];
 
@@ -51,14 +48,14 @@
 <section>
 	<div class="container px-4 lg:px-0 py-12 mx-auto min-h-[75vh] flex flex-wrap justify-between">
 		<div class="max-w-2xl md:basis-1/2 md:pr-4">
-			<h2 class="text-4xl mb-6 xl:text-5xl">
+			<h2 class="text-4xl mb-8 xl:text-5xl">
 				Videoita tarinoista ja ihmisistä jotka jäävät mieleen
 			</h2>
-			<p class="text-lg mb-8">
+			<p class="text-lg mb-16">
 				Paranna yrityksesi tunnettavuutta, kasvata myyntiäsi tai kouluta ihmisiä tyylikkäiden ja
 				ammattimaisten videoiden avulla
 			</p>
-			<div class="mb-4 flex justify-center">
+			<div class="mb-8 flex justify-center">
 				<Button on:click={displayModal} isLink={false}>Katso parhaat palat</Button>
 			</div>
 			<div class="text-center">
@@ -76,7 +73,7 @@
 </section>
 <section class="bg-stone-950 text-stone-50">
 	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-4xl font-bold mb-6">Videotuotantoa yrityksille</h2>
+		<h2 class="text-4xl font-bold mb-8">Videotuotantoa yrityksille</h2>
 		<p class="mb-4">
 			Toteutan yrityksille ammattimaisesti kuvattuja videoita, joiden avulla parannat yrityksesi
 			tunnettavuutta, myyntiä ja koulutuksia.
@@ -92,12 +89,24 @@
 		</p>
 	</div>
 	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-4xl font-bold mb-6">Palvelut</h2>
+		<h2 class="text-4xl font-bold mb-8">Palvelut</h2>
 		<div class="flex gap-8 justify-between flex-wrap">
 			{#each products as product}
-				<Card title={product.title} content={product.content}>
-					<img class="max-w-full" src={careerStories} alt="" srcset="" />
-				</Card>
+				<div class="flex-1 min-w-[250px]">
+					<Card title={product.title} content={product.content}>
+						<!-- <img class="max-w-full" src={careerStories} alt="" srcset="" /> -->
+						<div class="aspect-video">
+							<iframe
+								class="w-full h-full"
+								src={product.embedUrl}
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							/>
+						</div>
+					</Card>
+				</div>
 			{/each}
 		</div>
 	</div>
@@ -117,11 +126,13 @@
 			/>
 		</div>
 		<script src="https://player.vimeo.com/api/player.js"></script>
-		<Button href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</Button>
+		<div class="text-center">
+			<Button href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</Button>
+		</div>
 	</div>
 </section>
 <section>
-	<div class="container px-4 my-12 mx-auto">
+	<div class="container px-4 mt-16 mb-48 mx-auto">
 		<div class="mb-12 text-center">
 			<p class="text-7xl font-bold mb-4">20</p>
 			<p>vuotta videoalan kokemusta</p>
@@ -134,26 +145,42 @@
 </section>
 <section class="bg-stone-950 text-stone-50">
 	<div class="container px-4 py-12 mx-auto">
-		<p class="text-stone-400">Kolme syytä valita Fjäder Media</p>
-		<h2 class="text-4xl font-bold mb-6">Laatua vaivattomasti järkihintaan</h2>
-		<div class="flex gap-6 justify-between flex-wrap">
-			{#each benefits as benefit}
-				<Card title={benefit.title} content={benefit.content} />
-			{/each}
+		<div class="mb-12">
+			<p class="text-stone-400">Kolme syytä touhuta Fjäder Median kanssa</p>
+			<h2 class="text-4xl font-bold mb-8">Laatua vaivattomasti järkihintaan</h2>
+			<div class="flex gap-6 justify-between flex-wrap">
+				{#each benefits as benefit}
+					<Card title={benefit.title} content={benefit.content} />
+				{/each}
+			</div>
+		</div>
+		<div>
+			<h2 class="text-4xl font-bold mb-8">Miten meikä toimii?</h2>
+			<div class="aspect-video my-8">
+				<iframe
+					class="h-full w-full"
+					src="https://www.youtube.com/embed/tJtwab_yVlE?si=PEE_64TDIzbQPWQK"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen
+				/>
+			</div>
 		</div>
 	</div>
 </section>
 <section>
 	<div class="container px-4 py-12 mx-auto">
-		<h2 class="text-2xl mb-6">Hinta</h2>
-		<p>Videotuotanto on aina yksilöllistä ja lähtee sinun tarpeestasi.</p>
+		<p>Mitä tämä homma maksaa?</p>
+		<h2 class="text-4xl font-bold mb-8">Hinnat</h2>
+		<p>Tekemäni videot lähtevät aina sinun tarpeestasi ja ovat yksilöllisiä.</p>
 		<div class="my-4">
 			<p>Tyypillisesti asiakkaani ovat valmiitä käyttämään</p>
-			<p class="text-lg my-2">1 500 € - 5 000 €</p>
+			<p class="text-2xl my-2">1 500 € – 5 000 €</p>
 			<p>tuottamiini videoihin.</p>
 		</div>
 		<p>Hinta varmistuu kun olemme yhdessä määrittäneet tarpeesi, ennen kuin sitoudut mihinkään.</p>
-		<div class="my-4">
+		<div class="mt-8 mb-16">
 			<Button href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</Button>
 		</div>
 	</div>

@@ -3,7 +3,7 @@
 	export let content: string;
 </script>
 
-<div class="max-w-sm">
+<div class="">
 	<slot />
 	<h2 class="font-bold text-xl lg:text-3xl mt-4 mb-2">
 		{title}

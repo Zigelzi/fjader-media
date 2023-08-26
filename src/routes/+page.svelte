@@ -146,7 +146,7 @@
 <section class="bg-stone-950 text-stone-50">
 	<div class="container px-4 py-12 mx-auto">
 		<div class="mb-12">
-			<p class="text-stone-400">Kolme syytä touhuta Fjäder Median kanssa</p>
+			<p class="text-stone-50">Kolme syytä touhuta Fjäder Median kanssa</p>
 			<h2 class="text-4xl font-bold mb-8">Laatua vaivattomasti järkihintaan</h2>
 			<div class="flex gap-6 justify-between flex-wrap">
 				{#each benefits as benefit}
@@ -175,7 +175,7 @@
 		<h2 class="text-4xl font-bold mb-8">Hinnat</h2>
 		<p>Tekemäni videot lähtevät aina sinun tarpeestasi ja ovat yksilöllisiä.</p>
 		<div class="my-4">
-			<p>Tyypillisesti asiakkaani ovat valmiitä käyttämään</p>
+			<p>Tyypillisesti asiakkaani ovat valmiita käyttämään</p>
 			<p class="text-2xl my-2">1 500 € – 5 000 €</p>
 			<p>tuottamiini videoihin.</p>
 		</div>

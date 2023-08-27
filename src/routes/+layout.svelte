@@ -2,7 +2,7 @@
 	import '$lib/styles/app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import logo_white from '$lib/assets/logo_fjader_media_736x320_white.png';
-	import logo from '$lib/assets/logo_fjader_media_736x320.png';
+	import logo from '$lib/assets/logo_fjader_media_19-1x1.png';
 </script>
 
 <svelte:head>

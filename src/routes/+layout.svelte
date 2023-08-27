@@ -2,7 +2,19 @@
 	import '$lib/styles/app.css';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import logo_white from '$lib/assets/logo_fjader_media_736x320_white.png';
+	import logo from '$lib/assets/logo_fjader_media_736x320.png';
 </script>
+
+<svelte:head>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://fjadermedia.fi" />
+	<meta property="og:title" content="Fjäder Media - Videotuotantoa yrityksille" />
+	<meta
+		property="og:description"
+		content="Videoita tarinoista ja ihmisistä jotka jäävät mieleen. Paranna yrityksesi tunnettavuutta, kasvata myyntiäsi tai kouluta ihmisiä tyylikkäiden ja ammattimaisten videoiden avulla"
+	/>
+	<meta property="og:image" content={logo} />
+</svelte:head>
 
 <header>
 	<Navigation />

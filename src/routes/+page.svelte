@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Card from '$lib/components/Card.svelte';
 	import Button from '$lib/components/Button.svelte';
-	import careerStories from '$lib/assets/career-stories.jpg?w=400&h=300&webp';
 	import videoCamera from '$lib/assets/video-camera.jpg';
 	import EmbeddedVideo from '$lib/components/EmbeddedVideo.svelte';
 

@@ -3,6 +3,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import careerStories from '$lib/assets/career-stories.jpg?w=400&h=300&webp';
 	import videoCamera from '$lib/assets/video-camera.jpg';
+	import EmbeddedVideo from '$lib/components/EmbeddedVideo.svelte';
 
 	let contactEmail = 'samppa@fjadermedia.fi';
 	let isOverlayVisible = false;
@@ -11,13 +12,13 @@
 			title: 'Asiantuntijavideot',
 			content:
 				'Auta kohderyhmääsi ymmärtämään mistä homma kiikastaa ja miten juuri sinun yrityksesi tuote tai palvelu auttaa arjessa asiantuntijavideon tai verkkokurssin avulla.',
-			embedUrl: 'https://www.youtube.com/embed/0oPzyF3w0bI?si=B4OWU3ezZ7VKlbK8'
+			videoId: '0oPzyF3w0bI'
 		},
 		{
 			title: 'Yritysvideot',
 			content:
 				'Kerro asiakkaitesi kokemuksista ja ajatuksista tunteita herättävällä tavalla kokemusvideon tai haastattelun avulla.',
-			embedUrl: 'https://www.youtube.com/embed/uAkN8Igd700?si=oNoH9RUejx-ucYDa'
+			videoId: 'uAkN8Igd700'
 		}
 	];
 
@@ -94,17 +95,7 @@
 			{#each products as product}
 				<div class="flex-1 min-w-[250px]">
 					<Card title={product.title} content={product.content}>
-						<!-- <img class="max-w-full" src={careerStories} alt="" srcset="" /> -->
-						<div class="aspect-video">
-							<iframe
-								class="w-full h-full"
-								src={product.embedUrl}
-								title="YouTube video player"
-								frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen
-							/>
-						</div>
+						<EmbeddedVideo videoId={product.videoId} />
 					</Card>
 				</div>
 			{/each}
@@ -156,15 +147,8 @@
 		</div>
 		<div>
 			<h2 class="text-4xl font-bold mb-8">Miten meikä toimii?</h2>
-			<div class="aspect-video my-8">
-				<iframe
-					class="h-full w-full"
-					src="https://www.youtube.com/embed/tJtwab_yVlE?si=PEE_64TDIzbQPWQK"
-					title="YouTube video player"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-					allowfullscreen
-				/>
+			<div class="my-8">
+				<EmbeddedVideo videoId="tJtwab_yVlE" />
 			</div>
 		</div>
 	</div>

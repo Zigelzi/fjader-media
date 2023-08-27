@@ -19,12 +19,16 @@
 <header>
 	<Navigation />
 </header>
-<main>
+<main class="min-h-[60vh]">
 	<slot />
 </main>
 <footer class="bg-stone-950 text-stone-50">
 	<div class="px-4 py-6 container mx-auto">
-		<img src={logo_white} alt="Logo of Fjäder media" class="max-h-[120px] mx-auto mb-8" />
-		<p class="text-sm text-center">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</p>
+		<a href="/">
+			<img src={logo_white} alt="Logo of Fjäder Media" class="max-h-[120px] mx-auto mb-8" />
+			<p class="sr-only">Etusivu</p>
+		</a>
+		<p class="text-sm text-center mb-8">Videoita tarinoista ja ihmisistä jotka jäävät mieleen</p>
+		<a href="/yhteystiedot" class="text-center block">Yhteystiedot</a>
 	</div>
 </footer>

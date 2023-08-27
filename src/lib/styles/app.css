@@ -4,14 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--ff-primary: 'Montserrat', sans-serif;
-}
+@layer base {
+	:root {
+		--ff-primary: 'Montserrat', sans-serif;
+	}
 
-html {
-	font-family: var(--ff-primary);
-}
+	html {
+		font-family: var(--ff-primary);
+	}
 
-a {
-	text-decoration: underline;
+	a {
+		@apply underline underline-offset-8;
+	}
+
+	a:hover,
+	a:focus {
+		@apply text-stone-700 decoration-stone-400;
+	}
 }

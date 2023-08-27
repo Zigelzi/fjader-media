@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let height = '100%';
 	export let width = '100%';
 	export let videoId = '';
@@ -24,11 +24,13 @@
 		});
 	}
 
-	function onReady(event) {
-		event.target.playVideo();
+	function onReady(event: Event) {
+		if (event.target) {
+			event.target.playVideo();
+		}
 	}
 
-	function onStateChange(event) {}
+	function onStateChange(event: Event) {}
 </script>
 
 <svelte:head>

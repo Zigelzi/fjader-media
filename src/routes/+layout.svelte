@@ -14,6 +14,12 @@
 		content="Videoita tarinoista ja ihmisistä jotka jäävät mieleen. Paranna yrityksesi tunnettavuutta, kasvata myyntiäsi tai kouluta ihmisiä tyylikkäiden ja ammattimaisten videoiden avulla"
 	/>
 	<meta property="og:image" content={logo} />
+	<script
+		async
+		defer
+		src="https://cloud.umami.is/script.js"
+		data-website-id="190511ee-f596-4a09-8e2a-8be6ae4b3f3f"
+	></script>
 </svelte:head>
 
 <header>

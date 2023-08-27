@@ -2,6 +2,7 @@
 	import Card from '$lib/components/Card.svelte';
 	import Button from '$lib/components/Button.svelte';
 	import videoCamera from '$lib/assets/video-camera.jpg';
+	import samppaIsHero from '$lib/assets/samppa_ystava.jpeg?format=webp';
 	import EmbeddedVideo from '$lib/components/EmbeddedVideo.svelte';
 
 	let contactEmail = 'samppa@fjadermedia.fi';
@@ -53,7 +54,7 @@
 			</h2>
 			<p class="text-lg mb-16">
 				Paranna yrityksesi tunnettavuutta, kasvata myyntiäsi tai kouluta ihmisiä tyylikkäiden ja
-				ammattimaisten videoiden avulla
+				ammattimaisten videoiden avulla.
 			</p>
 			<div class="mb-8 flex justify-center">
 				<Button on:click={displayModal} isLink={false}>Katso parhaat palat</Button>
@@ -64,9 +65,9 @@
 		</div>
 		<div class="md:basis-1/2 mt-12 md:mt-0">
 			<div
-				class=" relative before:block before:inset-0 before:absolute before:inset-x-0 before:bg-stone-950/50 before:rounded-lg"
+				class=" relative before:block before:inset-0 before:absolute before:inset-x-0 before:bg-stone-950/20 before:rounded-lg"
 			>
-				<img src={videoCamera} class="rounded-lg" alt="" srcset="" />
+				<img src={samppaIsHero} class="rounded-lg" alt="Samppa with videocamera" />
 			</div>
 		</div>
 	</div>
@@ -78,7 +79,6 @@
 			Toteutan yrityksille ammattimaisesti kuvattuja videoita, joiden avulla parannat yrityksesi
 			tunnettavuutta, myyntiä ja koulutuksia.
 		</p>
-
 		<p class="mb-4">
 			Videoiden avulla pystyt näyttämään ja kertomaan tuotteestasi tai yrityksestäsi
 			mieleenpainuvalla tavalla.
@@ -86,6 +86,10 @@
 		<p class="mb-4">
 			Oli tavoitteesi sitten lisätä myyntiä, parantaa tunnettavuuttasi tai kouluttaa tuote tai
 			prosessi, niin video on erinomainen työkalu siihen.
+		</p>
+		<p>
+			Toimin koko Suomen alueella, eli laita ihmeessä viestiä vaikka vähän pidemmänkin matkan
+			päästä!
 		</p>
 	</div>
 	<div class="container px-4 py-12 mx-auto">

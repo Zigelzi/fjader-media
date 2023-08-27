@@ -43,8 +43,8 @@
 		on:click={loadYouTubeplayer}
 		on:keyup={loadYouTubeplayer}
 	>
-		<img src="http://img.youtube.com/vi/{videoId}/mqdefault.jpg" class="w-full h-full" alt="" />
-		<button class="yt-play-button" />
+		<img src="https://img.youtube.com/vi/{videoId}/mqdefault.jpg" class="w-full h-full" alt="" />
+		<button class="yt-play-button" title="Play embedded video" />
 	</div>
 	<div class:hidden={!isPlaceHolderHidden}>
 		<div {id} class="aspect-video" />

@@ -42,7 +42,6 @@
 
 	function displayModal(event: any) {
 		isOverlayVisible = !isOverlayVisible;
-		console.log('Clicked button!');
 	}
 </script>
 
@@ -57,10 +56,26 @@
 				ammattimaisten videoiden avulla.
 			</p>
 			<div class="mb-8 flex justify-center">
-				<Button on:click={displayModal} isLink={false}>Katso parhaat palat</Button>
+				<Button
+					on:click={displayModal}
+					isLink={false}
+					on:click={() => {
+						umami.track('Videon katselu aloitettu', {
+							name: 'showreel',
+							source: 'landing-page'
+						});
+					}}>Katso parhaat palat</Button
+				>
 			</div>
 			<div class="text-center">
-				<a href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</a>
+				<a
+					href="mailto:{contactEmail}"
+					on:click={() => {
+						umami.track('Yhteydenotto aloitettu', {
+							source: 'landing-page'
+						});
+					}}>Ota yhteyttä sähköpostilla</a
+				>
 			</div>
 		</div>
 		<div class="md:basis-1/2 mt-12 md:mt-0">
@@ -98,7 +113,11 @@
 			{#each products as product}
 				<div class="flex-1 min-w-[250px]">
 					<Card title={product.title} content={product.content}>
-						<EmbeddedVideo videoId={product.videoId} />
+						<EmbeddedVideo
+							videoId={product.videoId}
+							videoName={product.title}
+							videoSource="palvelut"
+						/>
 					</Card>
 				</div>
 			{/each}
@@ -109,7 +128,23 @@
 	<div class="container px-4 py-12 mx-auto">
 		<h3>Showreel</h3>
 		<h2 class="text-4xl font-bold">Parhaat palat</h2>
-		<div style="padding:56.25% 0 0 0;position:relative;" class="my-8">
+		<div
+			style="padding:56.25% 0 0 0;position:relative;"
+			class="my-8"
+			on:click={() => {
+				umami.track('Videon katselu aloitettu', {
+					name: 'showreel',
+					source: 'parhaat-palat'
+				});
+				console.log('test');
+			}}
+			on:keydown={() => {
+				umami.track('Videon katselu aloitettu', {
+					name: 'showreel',
+					source: 'parhaat-palat'
+				});
+			}}
+		>
 			<iframe
 				src="https://player.vimeo.com/video/814152881?h=9dd80cab10"
 				style="position:absolute;top:0;left:0;width:100%;height:100%;"
@@ -121,14 +156,21 @@
 		</div>
 		<script src="https://player.vimeo.com/api/player.js"></script>
 		<div class="text-center">
-			<Button href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</Button>
+			<Button
+				href="mailto:{contactEmail}"
+				on:click={() => {
+					umami.track('Yhteydenotto aloitettu', {
+						source: 'parhaat-palat'
+					});
+				}}>Ota yhteyttä sähköpostilla</Button
+			>
 		</div>
 	</div>
 </section>
 <section>
 	<div class="container px-4 mt-16 mb-48 mx-auto">
 		<div class="mb-12 text-center">
-			<p class="text-7xl font-bold mb-4">20</p>
+			<p class="text-7xl font-bold mb-4">10</p>
 			<p>vuotta videoalan kokemusta</p>
 		</div>
 		<div class="mb-12 text-center">
@@ -151,7 +193,11 @@
 		<div>
 			<h2 class="text-4xl font-bold mb-8">Miten meikä toimii?</h2>
 			<div class="my-8">
-				<EmbeddedVideo videoId="tJtwab_yVlE" />
+				<EmbeddedVideo
+					videoId="tJtwab_yVlE"
+					videoName="ihan-kuin-ammattilaisen-tekema"
+					videoSource="miten-meika-toimii"
+				/>
 			</div>
 		</div>
 	</div>
@@ -168,7 +214,14 @@
 		</div>
 		<p>Hinta varmistuu kun olemme yhdessä määrittäneet tarpeesi, ennen kuin sitoudut mihinkään.</p>
 		<div class="mt-8 mb-16">
-			<Button href="mailto:{contactEmail}">Ota yhteyttä sähköpostilla</Button>
+			<Button
+				href="mailto:{contactEmail}"
+				on:click={() => {
+					umami.track('Yhteydenotto aloitettu', {
+						source: 'hinnat'
+					});
+				}}>Ota yhteyttä sähköpostilla</Button
+			>
 		</div>
 	</div>
 </section>

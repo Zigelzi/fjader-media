@@ -2,6 +2,8 @@
 	export let height = '100%';
 	export let width = '100%';
 	export let videoId = '';
+	export let videoName = '';
+	export let videoSource = '';
 
 	let player;
 	let isPlaceHolderHidden = false;
@@ -27,6 +29,10 @@
 	function onReady(event: Event) {
 		if (event.target) {
 			event.target.playVideo();
+			umami.track('Videon katselu aloitettu', {
+				name: videoName,
+				source: videoSource
+			});
 		}
 	}
 
